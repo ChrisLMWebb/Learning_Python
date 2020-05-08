@@ -1,14 +1,18 @@
 #simple program to calculate the coefficients of a binomial
 
 #Row n
-n = int(input('Input the exponent, n, of the binomial you wish to calculate.\n'))
-
-while n < 0 or n == 0:
+n = 0
+while n < 1:
+    usern = input('Input the exponent, n, of the binomial you wish to calculate.\n')
+    try:
+        n = int(usern)
+    except:
+        print ('Fail')
     if n < 0:
-        print('Factorials do not exist for negative numbers.')
+        print('Factorials do not exist for negative numbers. Try again.')
     if n == 0:
-        print('The factorial of 0 is 1.')
-    n = int(input('Try again:'))
+        print('The factorial of 0 is 1. Try again.')
+
 
 #calculate n factorial
 nfact = 1
